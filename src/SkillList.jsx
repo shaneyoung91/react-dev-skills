@@ -1,13 +1,18 @@
 import React from 'react'
+import SkillListItem from './SkillListItem';
 import "./SkillListItem.css"
 
-export default function SkillList() {
+
+
+export default function SkillList({skills}) {
     return (
         <>
-            <ul>
-                <li className='SkillListItem'>SkillListItem</li>
-                <li className='SkillListItem'>SkillListItem</li>
-                <li className='SkillListItem'>SkillListItem</li>
+            <ul 
+                style={{padding:"0px"}}
+            >
+                {skills.map((skill, index) => (
+                    <SkillListItem skill={skill} index={index} key={index} />
+                ))}
             </ul>
         </>
     );

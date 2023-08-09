@@ -11,12 +11,12 @@ const skills = [
 
 function App() {
   return (
-      <>
+      <div className='App'>
         <h1 className='teal-text'>React Dev Skills</h1>
-        <SkillList />
-        <hr></hr>
+        <SkillList skills={skills} />
+        <br></br>
         <NewSkillForm />
-      </>
+      </div>
   )
 }
 
