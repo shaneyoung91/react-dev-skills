@@ -13,12 +13,17 @@ const initialSkills = [
 
 function App() {
   const [skills, setSkills] = useState(initialSkills);
+  
+  function addSkill(skill) {
+    setSkills([...skills, skill]);
+  }
+  
   return (
       <div className='App'>
         <h1 className='teal-text'>React Dev Skills</h1>
         <SkillList skills={skills} />
         <br></br>
-        <NewSkillForm />
+        <NewSkillForm addSkill={addSkill} />
       </div>
   )
 }

@@ -4,7 +4,7 @@ import "./SkillListItem.css"
 
 
 
-export default function SkillList({skills}) {
+export default function SkillList({ skills }) {
     return (
         <>
             <ul 
