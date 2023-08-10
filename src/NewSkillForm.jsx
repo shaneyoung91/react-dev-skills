@@ -29,7 +29,7 @@ export default function NewSkillForm({ addSkill }) {
         <>
             <form className="NewSkillForm" onSubmit={handleAddSkill}>
                 <label>Skill</label>
-                <input name="name" value={formData.name} onChange={handleChange}></input>
+                <input name="name" value={formData.name} onChange={handleChange} required pattern=".{3,}"></input>
                 <label>Level</label>
                 <select name="level" value={formData.level} onChange={handleChange}>
                     <option value={1}>1</option>
